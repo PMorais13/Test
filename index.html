@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pulse • Design Liquid Glass para App de Academia</title>
+    <meta
+      name="description"
+      content="Pulse é um conceito de app de academia em glassmorphism com foco em treinos, dieta, corridas e voz. Veja telas, componentes e diretrizes."
+    />
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+    <link rel="preload" href="https://fonts.cdnfonts.com/css/sf-pro-display" as="style" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="nav-container">
+        <a class="brand" href="#inicio">
+          <span class="brand__pulse" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 13.5h3.2L9.5 6l3.2 12 2.6-7 1.5 2.5H20"
+                stroke="#f4fbff"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          Pulse
+        </a>
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="#funcionalidades">Funcionalidades</a>
+          <a href="#componentes">Componentes</a>
+          <a href="#telas">Telas</a>
+          <a href="#voz">Assistente de Voz</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-pressed="false" data-toggle-theme>
+          <span aria-hidden="true">☾</span>
+          Modo Claro
+        </button>
+        <a class="primary-button" href="#fluxo" role="button">Ver fluxo completo</a>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="badges">
+            <span class="badge">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path
+                  d="M6 7.5h12M8 12h8M10 16.5h4"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Glassmorphism iOS
+            </span>
+            <span class="badge">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path
+                  d="M12 4.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm0 0v7.5l4 2"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Fluxo completo de treinos
+            </span>
+          </div>
+          <h1 id="hero-title">Pulse — app fitness em vidro líquido, acessível e motivador</h1>
+          <p>
+            Explore o guia visual completo do Pulse: treinos, corridas, dieta, calendário, estatísticas e assistente de voz, com
+            componentes reutilizáveis e contraste AA/AAA. Linguagem 100% em português e alinhada ao Human Interface Guidelines.
+          </p>
+          <div class="badges" role="list">
+            <span class="badge" role="listitem">WCAG AA+</span>
+            <span class="badge" role="listitem">Tipografia SF Pro</span>
+            <span class="badge" role="listitem">Modo Claro/Escuro</span>
+          </div>
+          <div class="cta-group" role="group" aria-label="Chamadas principais">
+            <a class="primary-button" href="#componentes">Abrir biblioteca UI</a>
+          </div>
+        </div>
+        <div class="hero-preview" aria-hidden="true">
+          <article class="mockup-device">
+            <div class="device-status">
+              <span>Hoje, 07:45</span>
+              <span>23° • Centro</span>
+            </div>
+            <div class="exercise-card">
+              <div class="exercise-card__header">
+                <h3 class="exercise-card__title">Treino do dia • Série B</h3>
+                <span class="exercise-chip">3/5 séries</span>
+              </div>
+              <div class="exercise-meta">
+                <span>Supino inclinado</span>
+                <span>12 reps • 32 kg</span>
+              </div>
+              <div class="progress-bar"><span class="progress-bar__fill"></span></div>
+              <div class="timer-block" role="presentation">
+                <span>Descanso</span>
+                <strong>00:45</strong>
+                <div class="timer-actions">
+                  <button class="ghost" type="button">+30s</button>
+                  <button class="solid" type="button">Concluir</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="funcionalidades" aria-labelledby="features-title">
+        <div class="section-header">
+          <h2 id="features-title">Funcionalidades centrais para treinar, comer bem e correr mais</h2>
+          <p>
+            O Pulse organiza todo o ciclo fitness em cartões translúcidos com blur Gaussiano de 26px, bordas 1px semi-transparentes e
+            sombras suaves. Cada módulo respeita feedback visual consistente e contraste elevado para leituras rápidas em movimento.
+          </p>
+        </div>
+        <div class="card-grid">
+          <article class="glass-card">
+            <div class="icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 5h4l2 14h6l2-9H9" stroke="#f4fbff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Home do Treino</h3>
+            <p>
+              Cartão “Treino do dia” com séries, reps e carga. Timer contextual embutido com presets de 30/60/90 segundos e CTA “Concluir
+              exercício”.
+            </p>
+          </article>
+          <article class="glass-card">
+            <div class="icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m7 18 5-12 3 7h4"
+                  stroke="#f4fbff"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Contador de Séries</h3>
+            <p>
+              Incremento rápido e edição de reps/carga com histórico por exercício. Feedback háptico sugerido para confirmar cada série.
+            </p>
+          </article>
+          <article class="glass-card">
+            <div class="icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 18.5a3.5 3.5 0 0 1 0-7h1.2L9.5 6l2.9 10 1.9-5 1.2 2H20"
+                  stroke="#f4fbff"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Cronômetro de Corrida</h3>
+            <p>
+              Iniciar/pausar/encerrar corrida com splits automáticos, pace médio, distância GPS e resumo ao finalizar com visual líquido.
+            </p>
+          </article>
+          <article class="glass-card">
+            <div class="icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.5 7.5h15M6 12h12M7.5 16.5h9"
+                  stroke="#f4fbff"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Dieta & Registro Alimentar</h3>
+            <p>
+              Refeições do dia com macros visíveis (kcal, carb, prot, gord), presets de porções e scanner rápido para adicionar alimentos.
+            </p>
+          </article>
+          <article class="glass-card">
+            <div class="icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.5 6h13v13h-13zm3.5 4h6m-6 3h4"
+                  stroke="#f4fbff"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Calendário de Treinos</h3>
+            <p>
+              Visão semanal/mensal com estados “feito” e reprogramação arrastando. Integração com Apple Calendar opcional.
+            </p>
+          </article>
+          <article class="glass-card">
+            <div class="icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 17a6 6 0 1 1 6 6v-4m0-15v3"
+                  stroke="#f4fbff"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Estatísticas & Metas</h3>
+            <p>
+              Gráficos minimalistas de carga, tempo total e pace, com metas exibidas em cartões de vidro compartilhando tokens visuais.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="componentes" aria-labelledby="components-title">
+        <div class="section-header">
+          <h2 id="components-title">Componentes reutilizáveis em vidro líquido</h2>
+          <p>
+            Tokens consistentes para cartões, botões, chips, modais e headers translúcidos garantem implementação fiel no iOS. Cada peça
+            combina blur 24–30px, bordas internas e ruído sutil (1–2%) para simular vidro real.
+          </p>
+        </div>
+        <div class="components-board">
+          <article class="component-token">
+            <strong>Card de Vidro</strong>
+            <p>Blur 26px, opacidade 12%, borda 1px branca 40%, highlight interno 20%. Sombra 0 28px 48px @12%.</p>
+            <div class="tokens-grid">
+              <div class="token-row"><span>Padding</span> <span>24 px</span></div>
+              <div class="token-row"><span>Raio</span> <span>24 px</span></div>
+              <div class="token-row"><span>Shadow</span> <span>0 28 48 @0.32</span></div>
+            </div>
+          </article>
+          <article class="component-token">
+            <strong>Botão Primário</strong>
+            <p>Fill sólido gradiente azul-ciano → roxo para contraste AAA. Texto #001321 e sombra 0 20px 36px.</p>
+            <div class="tokens-grid">
+              <div class="token-row"><span>Tamanho mínimo</span> <span>44 × 44 px</span></div>
+              <div class="token-row"><span>Estado hover</span> <span>+4% brilho</span></div>
+              <div class="token-row"><span>Estado ativo</span> <span>Pressão 120 ms</span></div>
+            </div>
+          </article>
+          <article class="component-token">
+            <strong>Chips & Pills</strong>
+            <p>Utilizadas para macros, séries e filtros. Fundo translúcido, contorno sutil e tipografia Semibold 14pt.</p>
+            <div class="tokens-grid">
+              <div class="token-row"><span>Altura</span> <span>36 px</span></div>
+              <div class="token-row"><span>Espaçamento</span> <span>12 px</span></div>
+              <div class="token-row"><span>Ícones</span> <span>Lineares, 20 px</span></div>
+            </div>
+          </article>
+          <article class="component-token">
+            <strong>Paleta de Feedback</strong>
+            <p>Cores calibradas para acessibilidade em fundo vidro escuro ou claro.</p>
+            <div class="swatch-row">
+              <span class="swatch primary">#33D3FF</span>
+              <span class="swatch secondary">#7A4BFF</span>
+              <span class="swatch success">#4DD881</span>
+              <span class="swatch warning">#F5A524</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="telas" aria-labelledby="screens-title">
+        <div class="section-header">
+          <h2 id="screens-title">Telas prototipadas com fluxo completo</h2>
+          <p>
+            Onboarding → Permissões (Saúde + GPS) → Home → Detalhe do Exercício → Timer → Concluir → Resumo. Cada etapa possui skeleton
+            loaders translúcidos e microinterações de 100 ms para propriocepção.
+          </p>
+        </div>
+        <div class="visual-grid">
+          <article class="mockup-card" aria-label="Resumo de corrida">
+            <div class="mockup-card__title">
+              <span>Corrida — Parque Ibirapuera</span>
+              <span>00:42:18</span>
+            </div>
+            <div class="mockup-card__body">
+              <div class="metrics">
+                <span class="metric-chip">Distância 8.4 km</span>
+                <span class="metric-chip">Pace 05'02"</span>
+                <span class="metric-chip success">VO2 42</span>
+                <span class="metric-chip warning">Altitude +120 m</span>
+              </div>
+              <div class="splits-list" role="list">
+                <div class="split-item" role="listitem"><span>Km 1</span> <span>05'12"</span></div>
+                <div class="split-item" role="listitem"><span>Km 2</span> <span>05'00"</span></div>
+                <div class="split-item" role="listitem"><span>Km 3</span> <span>04'58"</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="mockup-card" aria-label="Dieta e macros">
+            <div class="mockup-card__title">
+              <span>Dieta — Segunda</span>
+              <span>Restam 580 kcal</span>
+            </div>
+            <div class="mockup-card__body">
+              <div class="splits-list">
+                <div class="split-item"><span>Café da manhã</span> <span>420 kcal</span></div>
+                <div class="split-item"><span>Almoço</span> <span>690 kcal</span></div>
+                <div class="split-item"><span>Lanche</span> <span>240 kcal</span></div>
+              </div>
+              <div class="metrics">
+                <span class="metric-chip">Carbo 185 g</span>
+                <span class="metric-chip">Proteína 142 g</span>
+                <span class="metric-chip">Gorduras 58 g</span>
+              </div>
+            </div>
+          </article>
+          <article class="mockup-card" aria-label="Calendário semanal">
+            <div class="mockup-card__title">
+              <span>Calendário</span>
+              <span>Semana 18</span>
+            </div>
+            <div class="mockup-card__body">
+              <div class="splits-list">
+                <div class="split-item"><span>Seg • Treino A</span> <span class="highlight">Concluído</span></div>
+                <div class="split-item"><span>Ter • Corrida leve</span> <span>Agendado</span></div>
+                <div class="split-item"><span>Qua • Treino B</span> <span>Hoje</span></div>
+                <div class="split-item"><span>Qui • Yoga</span> <span>Reprogramar</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="voz" aria-labelledby="voice-title">
+        <div class="section-header">
+          <h2 id="voice-title">Assistente de voz com feedback líquido</h2>
+          <p>
+            Botão flutuante translúcido com onda sonora animada. Exemplos de comandos: “Começar descanso”, “Iniciar corrida”, “Registrar
+            almoço”, “Mostrar treino de hoje”.
+          </p>
+        </div>
+        <div class="command-center">
+          <div class="voice-wave" aria-hidden="true"></div>
+          <div class="voice-orb" role="img" aria-label="Assistente Pulse">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <path
+                d="M8 12c0 2.22 1.79 4 4 4s4-1.78 4-4V7.5a4 4 0 0 0-8 0V12Zm10 .5c0 3.03-2.24 5.5-5 5.5h-2c-2.76 0-5-2.47-5-5.5"
+                stroke="#f4fbff"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="command-list" role="list">
+            <span class="command-item" role="listitem">“Começar descanso de 60 segundos”</span>
+            <span class="command-item" role="listitem">“Iniciar corrida na marginal”</span>
+            <span class="command-item" role="listitem">“Registrar almoço com frango e quinoa”</span>
+            <span class="command-item" role="listitem">“Mostrar treino de hoje”</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="fluxo" aria-labelledby="flow-title">
+        <div class="section-header">
+          <h2 id="flow-title">Fluxo principal e boas práticas</h2>
+          <p>
+            Onboarding com ilustrações minimalistas → Permissões integradas com Apple Health/GPS → Home do dia → Execução de exercício →
+            Timer → Finalização → Resumo de performance. Skeleton loaders translúcidos e haptics iOS garantem sensação premium.
+          </p>
+        </div>
+        <div class="phone-stack">
+          <article class="phone-card">
+            <h4>Onboarding & Permissões</h4>
+            <p>Solicite Saúde + Localização em modais de vidro com feedback positivo e CTA claro “Permitir”.</p>
+          </article>
+          <article class="phone-card">
+            <h4>Execução de Treino</h4>
+            <p>Timer contextual, progresso por série, edições rápidas de carga e checklist de exercícios.</p>
+          </article>
+          <article class="phone-card">
+            <h4>Resumo Inteligente</h4>
+            <p>Metas cumpridas, macros, pace e sugestões personalizadas com chips coloridos de feedback.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title">
+        <div class="section-header">
+          <h2 id="faq-title">Perguntas frequentes</h2>
+          <p>Detalhes práticos sobre implementação, acessibilidade e variações do design.</p>
+        </div>
+        <div class="faq">
+          <article class="faq-item">
+            <h4>Como garantir contraste AA no vidro?</h4>
+            <p>
+              Use overlays escuros (rgba(0, 16, 44, 0.4) ou #fefefe 80%) sob textos e valide no simulador de acessibilidade. Tokens já
+              contemplam níveis AA/AAA.
+            </p>
+          </article>
+          <article class="faq-item">
+            <h4>Qual blur aplicar?</h4>
+            <p>Gaussian blur 24–30 px com ruído 1.5% e highlight interno 20% para manter efeito realista.</p>
+          </article>
+          <article class="faq-item">
+            <h4>Como incorporar textos extras do cliente?</h4>
+            <p>Substitua o placeholder <code>{{TEXTO_EXTRA_DO_CLIENTE}}</code> em todas as telas e materiais exportados.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <strong>Pulse</strong>
+        <span>Design Liquid Glass para app de academia — 2024.</span>
+        <span>Incorpore mensagens extras quando fornecidas: <code>{{TEXTO_EXTRA_DO_CLIENTE}}</code>.</span>
+      </div>
+    </footer>
+
+    <script src="assets/theme.js" type="module"></script>
+  </body>
+</html>
